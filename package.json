@@ -17,7 +17,8 @@
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
-    "test:e2e": "jest --config ./test/jest-e2e.json"
+    "test:e2e": "jest --config ./test/jest-e2e.json",
+    "test:cannon": "npx autocannon -c 425 -d 20 --workers 10 --renderStatusCodes --latency --warmup [ -c 1 -d 2 ] http://localhost:3000/users/exemplo_usuario"
   },
   "dependencies": {
     "@nestjs/common": "^10.0.0",
@@ -25,6 +26,7 @@
     "@nestjs/jwt": "^10.2.0",
     "@nestjs/mongoose": "^10.0.4",
     "@nestjs/platform-express": "^10.0.0",
+    "autocannon": "^7.15.0",
     "bcrypt": "^5.1.1",
     "class-validator": "^0.14.1",
     "mongoose": "^8.2.1",

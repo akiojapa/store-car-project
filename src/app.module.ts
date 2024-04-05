@@ -22,5 +22,4 @@ export class AppModule {
       .forRoutes({path: 'cars', method: RequestMethod.ALL})
   }
 
-  c
 }
